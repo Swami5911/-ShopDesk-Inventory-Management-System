@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { NavLink, useParams, useNavigate } from 'react-router-dom';
+import background from '../img/bg.png'; 
 
 export default function InsertProduct() {
     const [productName, setProductName] = useState("");
@@ -90,7 +91,12 @@ export default function InsertProduct() {
     }
 
     return (
-        <div className='container-fluid p-5'>
+        <div className="container-fluid p-5"
+        style={{
+            height: "100vh",
+            overflow: "hidden", // This hides the scrollbar
+            background: `url(${background}) no-repeat center center/cover`,
+        }}>
             <h1 className=''>Enter Product Information</h1>
             <div className="mt-5 col-lg-6 col-md-6 col-12">
                 <label htmlFor="product_name" className="form-label fs-4 fw-bold">Product Name</label>
